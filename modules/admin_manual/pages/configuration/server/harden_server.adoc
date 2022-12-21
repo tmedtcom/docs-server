@@ -299,7 +299,7 @@ protocol = tcp
 filter = owncloud
 maxretry = 3
 bantime = 10800
-logpath = /var/owncloud_data/owncloud.log
+logpath = /var/www/owncloud/data/owncloud.log
 ----
 
 This configuration:
@@ -332,7 +332,7 @@ command, adjusting the path to your `owncloud.log` if necessary:
 
 [source,bash]
 ----
-fail2ban-regex /var/owncloud_data/owncloud.log /etc/fail2ban/filter.d/owncloud.conf
+fail2ban-regex /var/www/owncloud/data/owncloud.log /etc/fail2ban/filter.d/owncloud.conf
 ----
 
 The output will look similar to the following if you had one failed
@@ -340,13 +340,13 @@ login attempt:
 
 [source,bash]
 ----
-fail2ban-regex /var/www/owncloud_data/owncloud.log /etc/fail2ban/filter.d/owncloud.conf
+fail2ban-regex /var/www/owncloud/data/owncloud.log /etc/fail2ban/filter.d/owncloud.conf
 
 Running tests
 =============
 
 Use   failregex file : /etc/fail2ban/filter.d/owncloud.conf
-Use         log file : /var/www/owncloud_data/owncloud.log
+Use         log file : /var/www/owncloud/data/owncloud.log
 
 Results
 =======
@@ -388,7 +388,7 @@ This will produce an output similar to this:
 ----
 Status for the jail: owncloud
 |- filter
-|  |- File list:    /var/www/owncloud_data/owncloud.log
+|  |- File list:    /var/www/owncloud/data/owncloud.log
 |  |- Currently failed: 1
 |  `- Total failed: 7
 `- action
